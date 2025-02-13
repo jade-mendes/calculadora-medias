@@ -9,6 +9,7 @@ function addScore(){
     }
     scores.push(newScore);
     showScore();
+    document.getElementById("score").value = "";
 }
 
 function showScore(){
@@ -17,10 +18,23 @@ function showScore(){
 }
 
 function calcAverage(){
-
+    if (scores.length == 0){
+        window.alert("Erro: Insira notas antes de calcular a média");
+        return;
+    }
+    let averageScore = 0;
+    for (let i = 0; i < scores.length; i++){
+        averageScore += scores[i];
+    }
+    averageScore = (averageScore/scores.length).toFixed(2);
+    let resultText = document.getElementById("result");
+    resultText.innerText = averageScore.toString();
 }
 
 let addScoreButton = document.getElementById("add-score-button");
 addScoreButton.addEventListener("click", addScore);
+
+let calcAverageButton = document.getElementById("calc-button");
+calcAverageButton.addEventListener("click", calcAverage);
 
 let scores = [];
