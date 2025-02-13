@@ -10,9 +10,22 @@
     <header>
         <h1>Média das Notas dos Alunos</h1>
     </header>
-
     <main>
+        <section id="main-container">
+            <div id="add-score-container">
+                <span>Nota:</span>
+                <input type="text">
+                <button id="first-button">Adicionar</button>
+            </div>
 
+            <div id="scores-panel">
+                <textarea rows="15" cols="55" style="resize:none" readonly></textarea>
+            </div>
+            <div id="results-container">
+                <button id="second-button">Calcular Média</button> <br>
+                <span>A média é: <span id="result"></span></span>
+            </div>
+        </section>
     </main>
     <script src="calc_script.js"></script>
 </body>

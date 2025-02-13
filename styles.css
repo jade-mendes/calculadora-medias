@@ -1,0 +1,36 @@
+body{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1{
+    color: white;
+}
+
+#main-container{
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3%;
+}
+
+#main-container div{
+    margin-left: 5%;
+}
+
+#results-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+#result{
+    font-weight: bold;
+}
